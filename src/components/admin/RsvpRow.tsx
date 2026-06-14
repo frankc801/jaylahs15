@@ -9,6 +9,7 @@ import {
 } from "@/app/admin/data-actions";
 
 const STATUS_OPTIONS: RsvpStatus[] = [
+  "submitted",
   "pending",
   "confirmed",
   "declined",
@@ -16,6 +17,7 @@ const STATUS_OPTIONS: RsvpStatus[] = [
 ];
 
 const STATUS_STYLES: Record<RsvpStatus, string> = {
+  submitted: "bg-gold-100 text-gold-800 border-gold-300",
   confirmed: "bg-emerald-100 text-emerald-800 border-emerald-300",
   pending: "bg-gold-100 text-gold-800 border-gold-300",
   declined: "bg-red-100 text-red-700 border-red-300",

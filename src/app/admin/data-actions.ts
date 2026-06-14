@@ -5,7 +5,13 @@ import { getAdminSupabase } from "@/lib/supabase/admin";
 import { isAuthenticated } from "@/lib/auth";
 import type { RsvpStatus } from "@/lib/types";
 
-const STATUSES: RsvpStatus[] = ["pending", "confirmed", "declined", "waitlist"];
+const STATUSES: RsvpStatus[] = [
+  "submitted",
+  "pending",
+  "confirmed",
+  "declined",
+  "waitlist",
+];
 
 function ensureAuth() {
   if (!isAuthenticated()) {

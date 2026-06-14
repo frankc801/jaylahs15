@@ -56,6 +56,8 @@ export async function submitRsvp(
 
   try {
     const supabase = getPublicSupabase();
+    // NOTE: status defaults to "submitted" and gift/notes fields are left unset
+    // to satisfy the anonymous-insert Row Level Security policy.
     const { error } = await supabase.from("rsvps").insert({
       full_name: fullName,
       phone,
@@ -63,7 +65,7 @@ export async function submitRsvp(
       guest_count: guestCount,
       guest_names: guestNames || null,
       message_for_jaylah: message || null,
-      status: attending ? "confirmed" : "declined",
+      status: "submitted",
     });
 
     if (error) {

@@ -17,7 +17,7 @@ create table if not exists public.rsvps (
   guest_count         integer not null default 1,
   guest_names         text,
   message_for_jaylah  text,
-  status              text not null default 'pending',     -- pending | confirmed | declined | waitlist
+  status              text not null default 'submitted',   -- submitted | pending | confirmed | declined | waitlist
   checked_in          boolean not null default false,
   gift_received       boolean not null default false,
   gift_notes          text,

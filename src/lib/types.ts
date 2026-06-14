@@ -1,4 +1,9 @@
-export type RsvpStatus = "pending" | "confirmed" | "declined" | "waitlist";
+export type RsvpStatus =
+  | "submitted"
+  | "pending"
+  | "confirmed"
+  | "declined"
+  | "waitlist";
 
 export interface Rsvp {
   id: string;
